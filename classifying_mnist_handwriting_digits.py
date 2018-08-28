@@ -20,11 +20,11 @@ W = tf.Variable(tf.zeros([784, 10]))
 y_true = tf.placeholder(tf.float32, [None, 10])
 y_pred = tf.matmul(x, W)
 
-#交叉熵
+#交叉熵作为损失函数
 cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(
                     logits=y_pred, labels=y_true))
 
-#梯度下降训练  学习率：0.5					
+#梯度下降训练，使损失函数最小  学习率：0.5					
 gd_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)					
 
 correct_mask = tf.equal(tf.argmax(y_pred, 1), tf.argmax(y_true, 1))
