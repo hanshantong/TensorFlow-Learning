@@ -112,3 +112,6 @@ venv.bak/
 *.db
 data/
 *.gz
+*.npy
+*.npz
+*.txt
