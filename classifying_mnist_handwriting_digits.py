@@ -44,4 +44,7 @@ with tf.Session() as sess:
 	ans = sess.run(accuracy, feed_dict={x: data.test.images, y_true: data.test.labels})
 	
 #打印正确识别率
-print("Accuracy: {:.4}%".format(ans*100))	
+print("Accuracy: {:.4}%".format(ans*100))
+
+
+	
